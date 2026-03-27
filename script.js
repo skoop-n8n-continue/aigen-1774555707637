@@ -4,7 +4,7 @@
  */
 
 // Cache busting query parameter
-const CACHE_BUST = 'v=frsh2';
+const CACHE_BUST = 'v=drkmd';
 
 // Featured items data
 const features = [

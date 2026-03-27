@@ -1,12 +1,12 @@
-/* CSS Variables defining the "Fresh & Crisp" Vibe */
+/* CSS Variables defining the Dark Mode Vibe */
 :root {
   /* Colors */
-  --bg-color: #FCFCFC; /* Clean off-white */
-  --text-main: #1A1A1A; /* High contrast dark grey for legibility */
-  --text-muted: #6A7071;
-  --accent-green: #4A7C59; /* Kale green */
-  --accent-orange: #F9A03F; /* Citrus orange */
-  --accent-red: #D33F49; /* Berry red */
+  --bg-color: #121212; /* Deep dark background */
+  --text-main: #F0F0F0; /* High contrast light grey for legibility */
+  --text-muted: #A0A5A8;
+  --accent-green: #6BCB84; /* Brighter kale green */
+  --accent-orange: #FFB347; /* Bright citrus orange */
+  --accent-red: #FF6B6B; /* Bright berry red */
 
   /* Typography */
   --font-heading: 'Montserrat', sans-serif;
@@ -138,15 +138,15 @@ body, html {
   font-size: 1.2rem;
   text-transform: uppercase;
   letter-spacing: 2px;
-  box-shadow: 0 4px 15px rgba(249, 160, 63, 0.4);
+  box-shadow: 0 4px 15px rgba(255, 179, 71, 0.4);
   animation: pulse 2.5s infinite ease-in-out;
   z-index: 3;
 }
 
 @keyframes pulse {
-  0% { transform: scale(1); box-shadow: 0 4px 15px rgba(249, 160, 63, 0.4); }
-  50% { transform: scale(1.08); box-shadow: 0 4px 25px rgba(249, 160, 63, 0.8); }
-  100% { transform: scale(1); box-shadow: 0 4px 15px rgba(249, 160, 63, 0.4); }
+  0% { transform: scale(1); box-shadow: 0 4px 15px rgba(255, 179, 71, 0.4); }
+  50% { transform: scale(1.08); box-shadow: 0 4px 25px rgba(255, 179, 71, 0.8); }
+  100% { transform: scale(1); box-shadow: 0 4px 15px rgba(255, 179, 71, 0.4); }
 }
 
 
@@ -160,7 +160,7 @@ body, html {
   padding: 4rem;
   background-color: var(--bg-color);
   z-index: 5;
-  box-shadow: -10px 0 40px rgba(0,0,0,0.05); /* Slight shadow to lift above image if overlapping */
+  box-shadow: -10px 0 40px rgba(0,0,0,0.5); /* Stronger shadow for dark mode */
 }
 
 .menu-header {
@@ -213,7 +213,7 @@ body, html {
   font-weight: 600;
   color: var(--accent-red);
   margin-bottom: 1.5rem;
-  border-bottom: 2px solid rgba(211, 63, 73, 0.2);
+  border-bottom: 2px solid rgba(255, 107, 107, 0.2);
   padding-bottom: 0.5rem;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -240,7 +240,7 @@ body, html {
 
 .item-dots {
   flex-grow: 1;
-  border-bottom: 2px dotted #D0D0D0;
+  border-bottom: 2px dotted rgba(255, 255, 255, 0.15);
   margin: 0 1rem 0.35rem 1rem;
 }
 

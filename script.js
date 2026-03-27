@@ -4,7 +4,7 @@
  */
 
 // Cache busting query parameter
-const CACHE_BUST = 'v=frsh2';
+const CACHE_BUST = 'v=frsh3';
 
 // Featured items data
 const features = [
@@ -30,25 +30,25 @@ const menuData = [
   {
     category: 'Salads & Bowls',
     items: [
-      { name: 'Harvest Bowl', price: '12.50', desc: 'Kale, sweet potato, quinoa, almonds' },
-      { name: 'Citrus Summer Salad', price: '11.00', desc: 'Mixed greens, orange segments, feta, pecans' },
-      { name: 'Protein Power Bowl', price: '13.50', desc: 'Brown rice, black beans, avocado, grilled chicken' }
+      { name: 'Harvest Bowl', price: '12.50', calories: '450', desc: 'Kale, sweet potato, quinoa, almonds' },
+      { name: 'Citrus Summer Salad', price: '11.00', calories: '320', desc: 'Mixed greens, orange segments, feta, pecans' },
+      { name: 'Protein Power Bowl', price: '13.50', calories: '680', desc: 'Brown rice, black beans, avocado, grilled chicken' }
     ]
   },
   {
     category: 'Smoothies & Juices',
     items: [
-      { name: 'Berry Antioxidant', price: '7.50', desc: 'Açaí, blueberry, strawberry, almond milk' },
-      { name: 'Green Detox', price: '8.00', desc: 'Spinach, cucumber, green apple, ginger, lemon' },
-      { name: 'Tropical Sunrise', price: '7.00', desc: 'Mango, pineapple, coconut water, turmeric' }
+      { name: 'Berry Antioxidant', price: '7.50', calories: '210', desc: 'Açaí, blueberry, strawberry, almond milk' },
+      { name: 'Green Detox', price: '8.00', calories: '140', desc: 'Spinach, cucumber, green apple, ginger, lemon' },
+      { name: 'Tropical Sunrise', price: '7.00', calories: '190', desc: 'Mango, pineapple, coconut water, turmeric' }
     ]
   },
   {
     category: 'Artisan Toasts',
     items: [
-      { name: 'Avocado Smush', price: '9.00', desc: 'Avocado, cherry tomatoes, balsamic glaze' },
-      { name: 'Fig & Ricotta', price: '8.50', desc: 'Whipped ricotta, fresh figs, honey drizzle' },
-      { name: 'Smoked Salmon', price: '10.50', desc: 'Cream cheese, capers, dill, red onion' }
+      { name: 'Avocado Smush', price: '9.00', calories: '340', desc: 'Avocado, cherry tomatoes, balsamic glaze' },
+      { name: 'Fig & Ricotta', price: '8.50', calories: '280', desc: 'Whipped ricotta, fresh figs, honey drizzle' },
+      { name: 'Smoked Salmon', price: '10.50', calories: '420', desc: 'Cream cheese, capers, dill, red onion' }
     ]
   }
 ];
@@ -82,7 +82,10 @@ function renderMenu() {
         <div class="item-row">
           <span class="item-name">${item.name}</span>
           <span class="item-dots"></span>
-          <span class="item-price">$${item.price}</span>
+          <span class="item-price">
+            $${item.price}
+            <span class="item-calories">${item.calories} kcal</span>
+          </span>
         </div>
         <div class="item-desc">${item.desc}</div>
       `;

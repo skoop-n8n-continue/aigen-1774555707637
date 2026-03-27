@@ -30,43 +30,10 @@ body, html {
   -webkit-font-smoothing: antialiased;
 }
 
-body {
-  display: flex;
-  flex-direction: column;
-}
-
-.promo-banner {
-  width: 100%;
-  flex-shrink: 0;
-  background-color: #FF007F; /* Vibrant pink/magenta */
-  color: #FFF;
-  padding: 15px 0;
-  font-family: var(--font-heading);
-  font-weight: 700;
-  font-size: 1.8rem;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  z-index: 100;
-  overflow: hidden;
-  white-space: nowrap;
-  box-shadow: 0 4px 15px rgba(255, 0, 127, 0.4);
-}
-
-.promo-text {
-  display: inline-block;
-  animation: slideLeft 15s linear infinite;
-  will-change: transform;
-}
-
-@keyframes slideLeft {
-  0% { transform: translateX(100vw); }
-  100% { transform: translateX(-100%); }
-}
-
 .container {
   display: flex;
   width: 100%;
-  flex: 1;
+  height: 100%;
   flex-direction: row; /* Magazine style: 50/50 split on landscape */
 }
 
@@ -282,6 +249,17 @@ body {
   font-weight: 600;
   font-size: 1.25rem;
   color: var(--text-main);
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+
+.item-calories {
+  font-family: var(--font-body);
+  font-weight: 300;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  white-space: nowrap;
 }
 
 .item-desc {
